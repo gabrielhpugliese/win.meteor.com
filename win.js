@@ -10,7 +10,7 @@ if (Meteor.is_client) {
   Template.windows.sd_github = "https://github.com/sdarnell/meteor";
   Template.windows.sd_wiki = "https://github.com/sdarnell/meteor/wiki/Windows";
 
-  Template.windows.pg_link = "http://goo.gl/clpKa";
+  Template.windows.gp_link = "http://goo.gl/clpKa";
 
   Template.windows.ms_link = "https://github.com/shoebappa/vagrant-meteor-windows";
 }
