@@ -1,5 +1,5 @@
 <head>
-	<title>Meteor for Windows</title>
+	<title>Meteor on Windows</title>
 </head>
 
 <body>
@@ -7,8 +7,36 @@
 </body>
 
 <template name="windows">
-	<h1><img src="Meteor.png" /> Meteor {{version}} for Windows!</h1>
-  
+	<h1><img src="images/Meteor.png" /> Meteor on Windows!</h1>
+	
+	<div>
+		<div class="warning">
+			<p>The Original Unofficial Meteor for Windows support has been discontinued.  The great work of Tom Wijsman will be kept below for a period of time during this transition and a great deal of thanks goes out to him for his great work and maintenance of Windows support through all of the rapid and sometimes breaking changes in the early stages of Meteor, as well as his support in the graceful transition of his work and this page.</p>
+
+			<p>This page is being transitioned to provide an overview of the Unofficial community supported options for both getting Meteor running natively on Windows (a continuation of Tom's great work), as well as several near fully automated provisioned virtualized solutions.</p>
+		</div>
+
+		<h2>Native Solution</h2>
+		<p>Stephen Darnell has picked up where Tom Wijsman graciously left off.  This solution is the most straight forward way to get Meteor running on Windows with an MSI Installer provided.  There are some trade-offs because this is a fork of Meteor, and can lag behind the latest versions as Stephen can update to and test the latest version.</p>
+		<p><a href="{{sd_download}}">Download Meteor {{sd_version}} for Windows ({{sd_fileSize}}).</a></p>
+		<p><a href="{{sd_github}}">GitHub Repository</a> and <a href="{{sd_wiki}}">GitHub Wiki</a></p>
+
+		<h2>Virtualized Solutions</h2>
+		<p>There are currently two published <a href="http://www.vagrantup.com/">Vagrant</a>-based solutions for near fully automating provisioning of a headless virtualized Linux VirtualBox environment that will run Meteor and allow for the editing of the Meteor apps using Vagrant's Synced Folders.  This allows for the use of Windows development tools from the local Windows host, and the live updating aspects of Meteor are preserved through to the Linux VM.  These solutions require some pre-requisite installation, but have the added benefit of being able to stay at the current Meteor version.  These will also allow for the use of Meteorite.</p>
+		
+		<h3>Vagrant Shell Provisioning</h3>
+		<p>Gariel Pugliese has posted a guide for how to provision Meteor on Linux with Vagrant's Shell Provisioning.  These may be more accessible to users familier with Linux and Shell scripts.  This solution is easier to tweak through the straight forward shell commands than the Chef alternative.</p>
+		<p><a href="{{gp_link}}">Vagrant Shell Provisioning Guide</a></p>
+
+		<h3>Vagrant Chef Provisioning</h3>
+		<p>Matthew Sullivan is maintaining a set of Vagrant files, Chef cookbook, and guide for provisioning Meteor on Linux with Vagrant.  This Chef solution is a slightly more automated and configurable than the shell solution, however likely not as simple to tweak beyond the provided configuration parameters as the Shell solution.</p>
+		<p><a href="{{ms_link}}">GitHub Repository: Vagrant Chef Provisioning</a></p>
+
+		<h2>Support</h2>
+		<p>Bug reports and pull requests are more than welcome and should go to the respective GitHub pages.  Feel free to contact us about any of the above solutions on the <a href="https://groups.google.com/forum/?fromgroups#!forum/meteor-talk">Meteor-Talk Google Group</a>.</p>
+	</div>
+
+
 	<div>
 		<div class="warning">
 			<h1>Unofficial Meteor for Windows support has been discontinued!</h1>
@@ -38,12 +66,14 @@
 			<li>On Windows 8, you will need to set <pre>node.exe</pre> to "Windows 7" <a href="http://www.howtogeek.com/howto/windows-vista/using-windows-vista-compatibility-mode/">compatibility mode</a> in <pre>C:\Program Files\Meteor\bin</pre>. Use the <pre>Program Files (x86)</pre> folder if you are using a 64 bit edition.</li>
 		</ol>
 
-		<h2>Where can I report bugs?</h2>
+		<!--<h2>Where can I report bugs?</h2>
 
 		<ul>
 			<li>Report Windows related bugs at <a href="https://github.com/TomWij/meteor/issues">TomWij/meteor</a>.</li>
 			<li>Report any other bug at <a href="https://github.com/meteor/meteor/issues">meteor/meteor</a>.</li>
 		</ul>
+
+		-->
 
 		<h2>Want to clone us and help port Meteor?</h2>
 
