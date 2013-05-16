@@ -1,5 +1,9 @@
 a {
-	color: #A0A0A0;
+	color: #1570a6;
+}
+
+a:hover {
+	color: #00a1f1;
 }
 
 img {
@@ -9,7 +13,7 @@ img {
 }
 
 body {
-	background-color: #A0A0A0;
+	background-color: #1570a6;
 	color: White;
 	width: 800px;
 	margin: 0px auto;
@@ -18,12 +22,19 @@ body {
 h1 {
 	font-family: Trebuchet MS, Liberation Sans, DejaVu Sans, sans-serif;
 	letter-spacing: 1px;
-	margin-left: 5px;
 	margin-bottom: 40px;
 }
 
-h2 {
+h2, h3 {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.25em;
 }
 
 div {
@@ -31,7 +42,7 @@ div {
 	color: Black;
 
 	display: block;
-	padding: 80px 100px;
+	padding: 60px 100px;
 	border: solid 2px Black;
 	background-color : White;
 
@@ -59,9 +70,24 @@ pre {
 }
 
 .warning {
-	padding: 20px;
+	background-color: #F6F6F6;
+	border-color: #EEEEEE;
+	-moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+	margin-left: -4%;
+	padding: 10px 4%;
+	width: 100%;
+}
+
+.warning.bottom {
+	margin-top: 40px;
 }
 
 .warning h1 {
 	font-size: 16px;
+}
+
+.warning h2 {
+	font-size: 1em;
 }
