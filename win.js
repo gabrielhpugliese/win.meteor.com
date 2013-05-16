@@ -5,7 +5,7 @@ if (Meteor.is_client) {
   Template.windows.fileSize = "12.67 MB";
 
   Template.windows.sd_download = "https://docs.google.com/uc?export=download&id=0B4Vwungdd_-RWVR3RXBVVGw0dTA";
-  Template.windows.sd_version = "PREVIEW 0.6.3";
+  Template.windows.sd_version = "PREVIEW 0.6.3.1";
   Template.windows.sd_fileSize = "27.5 MB";
   Template.windows.sd_github = "https://github.com/sdarnell/meteor";
   Template.windows.sd_wiki = "https://github.com/sdarnell/meteor/wiki/Windows";
