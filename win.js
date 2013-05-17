@@ -4,6 +4,9 @@ if (Meteor.is_client) {
   Template.windows.bundle = "https://dl.dropbox.com/s/2ftlw6p2sq8t6ky/dev_bundle_MINGW32_NT-6.1_i386_0.2.23.tar.gz?dl=1";
   Template.windows.fileSize = "12.67 MB";
 
+  Template.windows.meteor_link = "http://www.meteor.com/";
+  Template.windows.meteorite_link = "https://github.com/oortcloud/meteorite";
+
   Template.windows.sd_download = "https://docs.google.com/uc?export=download&id=0B4Vwungdd_-RWVR3RXBVVGw0dTA";
   Template.windows.sd_version = "PREVIEW 0.6.3.1";
   Template.windows.sd_fileSize = "27.5 MB";
