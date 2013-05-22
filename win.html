@@ -11,13 +11,13 @@
 	
 	<div>
 		<div class="warning">
-			<h2>Meteor on Windows is undergoing a Changing of the Guard.</h2>
-			<p>This page is being transitioned to provide an overview of the Unofficial community supported options for both getting <a href="{{meteor_link}}">Meteor</a> running natively on Windows (a continuation of Tom Wijsman's great work), as well as several near fully automated provisioned virtualized solutions.  Thanks, Tom!</p>
+			<h2>Unofficial support for Meteor on Windows</h2>
+			<p>This page provides an overview of the unofficial community supported options for both getting <a href="{{meteor_link}}">Meteor</a> running natively on Windows (a continuation of Tom Wijsman's great work), as well as several near fully automated provisioned virtualized solutions. Thanks, Tom!</p>
 		</div>
 
 		<h2>Native Solution</h2>
 		<p>Stephen Darnell has picked up where Tom Wijsman graciously left off.  This solution is the most straight forward way to get <a href="{{meteor_link}}">Meteor</a> running on Windows with an MSI Installer provided.  There are some trade-offs because this is a fork and can lag behind the latest version as Stephen can update to and test the latest version.</p>
-		<p><a href="{{sd_download}}">Download Meteor {{sd_version}} for Windows ({{sd_fileSize}}).</a></p>
+		<p><a href="{{sd_download}}">Download Meteor {{sd_version}} for Windows ({{sd_fileSize}})</a></p>
 		<p><a href="{{sd_github}}">GitHub Repository</a> and <a href="{{sd_wiki}}">GitHub Wiki</a></p>
 
 		<h2>Virtualized Solutions</h2>
@@ -35,130 +35,8 @@
 		<p>Bug reports and pull requests are more than welcome and should go to the respective GitHub pages.  Feel free to contact us about any of the above solutions on the <a href="https://groups.google.com/forum/?fromgroups#!forum/meteor-talk">Meteor-Talk Google Group</a>.</p>
 
 		<div class="warning bottom">
-			<p>The great work of Tom Wijsman, the Original Unofficial Meteor for Windows support, will be kept below for a period of time during this transition and a great deal of thanks goes out to him for his great work and maintenance of Windows support through all of the rapid and sometimes breaking changes in the early stages of <a href="{{meteor_link}}">Meteor</a>, as well as his support in the graceful transition of his work and this page.</p>
+			<p>All these solutions build on the great work of Tom Wijsman, the original author of the unofficial Windows port.  A great deal of thanks goes out to him for his great work and maintenance of Windows support through all of the rapid and sometimes breaking changes in the early stages of <a href="{{meteor_link}}">Meteor</a>, as well as his support in the graceful transition of his work and this page.</p>
 		</div>
 	</div>
 
-	<h2>Original Unofficial Meteor for Windows {{version}} and earlier</h2>
-	<div>
-		<div class="warning">
-			<h1>Unofficial Meteor for Windows support has been discontinued!</h1>
-
-			<p>With the introduction of the warehouse (the new distribution system) and the change in installation approach (hackily does that to the user account, completely neglecting any form of user or enterprise package manager) I will no longer produce installers as this is unsustainable. As a consequence of that and that I currently no longer actively use Meteor or Windows, I will not be able to support this any longer myself.</p>
-
-			<p>Those who that wish to continue to use Meteor for Windows can fork the project and attempt to port the patches to newer versions. Those that are willing to continue support may be handed over the win.meteor.com sub domain some time from now, those that contributed (either through code or issues) may get preference when multiple people ask access. Hopefully, we'll see the fixes merge into Meteor in the future...</p>
-
-			<p>To all those who have used Meteor for Windows, thank you; may Meteor continue to shine in the future, whichever way it goes.</p>
-
-			<p>With kind regards,<br /><br />Tom Wijsman</p>
-
-			<p><b>PS:</b> There may be a chance I continue to contribute in the future, albeit in a different way; I'll continue to wear this shirt with pride.</p>
-		</div>
-
-		<h2>Where can I download the latest version?</h2>
-
-		<p><a href="{{download}}">Download Meteor {{version}} for Windows ({{fileSize}}).</a></p>
-
-		<h2>What do I need to do to install this?</h2>
-
-		These instructions will install Meteor on your computer, after a reboot you will be able to run <pre>meteor</pre> like in the instructions; this section therefore replaces the curl instruction found in the <a href="http://docs.meteor.com/">documentation</a> and on the <a href="http://meteor.com">Meteor site</a>.
-
-		<ol>
-			<li>Install the above MSI installer.</li>
-			<li>Reboot for the environment changes to apply.</li>
-			<li>On Windows 8, you will need to set <pre>node.exe</pre> to "Windows 7" <a href="http://www.howtogeek.com/howto/windows-vista/using-windows-vista-compatibility-mode/">compatibility mode</a> in <pre>C:\Program Files\Meteor\bin</pre>. Use the <pre>Program Files (x86)</pre> folder if you are using a 64 bit edition.</li>
-		</ol>
-
-		<!--<h2>Where can I report bugs?</h2>
-
-		<ul>
-			<li>Report Windows related bugs at <a href="https://github.com/TomWij/meteor/issues">TomWij/meteor</a>.</li>
-			<li>Report any other bug at <a href="https://github.com/meteor/meteor/issues">meteor/meteor</a>.</li>
-		</ul>
-
-		-->
-
-		<h2>Want to clone us and help port Meteor?</h2>
-
-		These instructions are only meant to be followed if you wish to contribute to porting Meteor to Windows, they are not necessary for running Meteor on Windows. 
-
-		<ol>
-			<li>Get <a href="http://git-scm.com/downloads">Git for Windows</a> and do a <pre>git clone git://github.com/TomWij/meteor.git</pre></li>
-			<li><p><a href="{{bundle}}">Download the development bundle</a> and place it in the folder you have just pulled, make sure you download any new development bundles once new versions of Meteor get released; they are available in the <a href="https://github.com/TomWij/meteor/downloads">Downloads tab</a> of the repository <a href="https://github.com/TomWij/meteor">TomWij/meteor</a>.</p><p>Alternatively, you can attempt to generate your own using 'sh admin/generate_dev_bundle.sh' from Git Bash.</p></li>
-			<li>Run <pre>meteor</pre> from Git Bash in the Meteor folder which will install the development bundle into place.</li>
-			<li>Set up environment variables according to <a href="https://github.com/TomWij/meteor/blob/support-windows/admin/wix/Meteor_Template.wxs#L12">these Environment tags</a>, for each environment tag there you have to create or change an environment variable with the name in the Id attribute and add the last Value attribute to it, replace [INSTALLDIR] with the installation directory of Meteor with a backslash at the end. In detail:
-
-				<ul>
-					<li><pre>PATH</pre>: Add the Meteor directory as well as its <pre>bin</pre> directory.</li>
-					<li><pre>METOR_PATH</pre>: Set to the Meteor install directory.</li>
-					<li><pre>NODE_PATH</pre>: Set it to <pre>lib\node_modules</pre> inside of Meteor.</li>
-				</ul></li>
-			<li>Feel free to start talk to me on <a href="http://meteor.com/irc">Meteor IRC</a> or through an issue to discuss things, to request a pull or when experiencing issues with these instructions.</li>
-		</ol>
-
-		<h2>Who has contributed to this port?</h2>
-
-		<a href="https://github.com/matb33"><img src="https://secure.gravatar.com/avatar/4e0cd44263cf00f05ddc34eee9a45669?s=50" /></a>
-		<a href="https://github.com/sdarnell"><img src="https://secure.gravatar.com/avatar/a950fa5f4e9d43883540bfc82517a669?s=50" /></a>
-		<a href="https://github.com/TomWij"><img src="https://secure.gravatar.com/avatar/d3b75bb3bda58d5d4a7d31b820f856c9?s=50" /></a>
-
-		<p>Thank you for your contributions!</p>
-
-		<h2>What has been done so far?</h2>
-
-		<ul>
-			<li><strong>2013-03-17</strong>: <strong>Published Meteor PREVIEW 0.5.9 for Windows</strong>.</li>
-			<li><strong>2013-03-17</strong>: Pulled in kexec bundling and installer reliability fix by <a href="https://github.com/sdarnell">sdarnell</a>.</li>
-			<li><strong>2013-03-01</strong>: Merged in the 0.5.9 changes, all tests pass.</li>
-			<li><strong>2013-03-01</strong>: <strong>Published Meteor PREVIEW 0.5.7 for Windows</strong>.</li>
-			<li><strong>2013-03-01</strong>: Fixed unpacking of dependency bundle, arches did not correspond.</li>
-			<li><strong>2013-03-01</strong>: Pulled in accidental node_modules removal fixes by <a href="https://github.com/matb33">matb33</a>.</li>
-			<li><strong>2013-03-01</strong>: Pulled in development bundle generation fixes by <a href="https://github.com/sdarnell">sdarnell</a>.</li>
-			<li><strong>2013-03-01</strong>: Merged in the 0.5.7 changes, all tests pass; uses newer Node.js and Fibers so is quite promising.</li>
-			<li><strong>2013-01-11</strong>: <strong>Published Meteor PREVIEW 0.5.4 for Windows</strong>.</li>
-			<li><strong>2012-12-30</strong>: Fixed deploy issue which was introduced due to an incorrect merge.</li>
-			<li><strong>2012-12-30</strong>: Merged in the 0.5.4 changes, all tests pass.</li>
-			<li><strong>2012-12-10</strong>: <strong>Published Meteor PREVIEW 0.5.2 for Windows</strong>.</li>
-			<li><strong>2012-12-10</strong>: Updated warning when deploying from CMD with instructions for those that do not have tar and gzip.</li>
-			<li><strong>2012-12-07</strong>: Merged in the 0.5.2 changes, all tests pass.</li>
-			<li><strong>2012-12-01</strong>: Fixed MongoDB for Windows XP users by switching to the stable 2.0.x branch.</li>
-			<li><strong>2012-12-01</strong>: Fixed regression introduced by implementing cross-platform slashes, generated URLs are now HTTP compliant.</li>
-			<li><strong>2012-10-30</strong>: <strong>Published Meteor PREVIEW 0.5.0 for Windows</strong>.</li>
-			<li><strong>2012-10-30</strong>: All the commits have been reworked into a shorter list of commits to obtain a more clean diff.</li>
-			<li><strong>2012-10-30</strong>: Merged in the 0.5.0 changes, all tests except for <pre>sass</pre> pass and the three basic examples work.</li>
-			<li><strong>2012-10-11</strong>: <strong>Published Meteor PREVIEW 0.4.2 for Windows</strong>.</li>
-			<li><strong>2012-10-11</strong>: Changed Node.js version to 0.8.11.</li>
-			<li><strong>2012-10-11</strong>: Merged in the 0.4.2 changes, tested and working.</li>
-			<li><strong>2012-10-11</strong>: Replaced path.existsSync by fs.existsSync to get rid of an unnecessary warning.</li>
-			<li><strong>2012-10-11</strong>: Added instructions to aid when mongod fails to start.</li>
-			<li><strong>2012-10-11</strong>: Introduced a warning on CMD which mentions to use Git Bash instead for now.</li>
-			<li><strong>2012-09-24</strong>: Fixed deploying from Git Bash.</li>
-			<li><strong>2012-09-24</strong>: Bumped MongoDB to version 2.2.0, 'meteor mongo' assumes that Meteor runs to be able to start the MongoDB console.</li>
-			<li><strong>2012-09-24</strong>: Merged in the 0.4.1 changes, tested and working.</li>
-			<li><strong>2012-09-14</strong>: <strong>Updated Meteor PREVIEW 0.4.0 for Windows</strong>, to replace accidental 64-bit binaries by 32-bit binaries.</li>
-			<li><strong>2012-09-13</strong>: <strong>Published Meteor PREVIEW 0.4.0 for Windows</strong>, includes Spark and Auth branches; runs on Node.js v0.8.9 and runs on the same npm modules as Meteor itself uses.</i>
-			<li><strong>2012-09-13</strong>: Changed 'meteor update' and 'meteor bundle' to warn the user that they are not supported.</li>
-			<li><strong>2012-09-13</strong>: Changed Node.js version to 0.8.9.</li>
-			<li><strong>2012-09-13</strong>: Merged in the 0.4.0 changes, tested and working.</li>
-			<li><strong>2012-08-22</strong>: <strong>Updated Meteor PREVIEW 0.3.9 for Windows</strong>.</li>
-			<li><strong>2012-08-22</strong>: Made Meteor use the bundled Node.js on CMD, fixes a Fiber crash.</li>
-			<li><strong>2012-08-21</strong>: Fix for Windows file dependency sorting.</li>
-			<li><strong>2012-08-20</strong>: <strong>Published Meteor PREVIEW 0.3.9 for Windows</strong>.</li>
-			<li><strong>2012-08-20</strong>: Changed Mongo to 32-bit to support 32-bit and 64-bit Windows.</li>
-			<li><strong>2012-08-20</strong>: Properly close file watches by supporting the new callback.</li>
-			<li><strong>2012-08-14</strong>: Merged in the 0.3.9 changes, tested and working.</li>
-			<li><strong>2012-06-15</strong>: <strong>Published Meteor PREVIEW 0.3.7 for Windows</strong>.</li>
-			<li><strong>2012-06-15</strong>: Fixed previous version detection.</li>
-			<li><strong>2012-06-15</strong>: Changed Node.js version to 0.6.19.</li>
-			<li><strong>2012-06-15</strong>: Made a Windows MSI packer. More fixes to 'meteor'. Updated '.gitignore' files.</li>
-			<li><strong>2012-06-14</strong>: Prepared 'meteor' and 'meteor.bat' for the MSI installer approach by supporting paths with spaces.</li>
-			<li><strong>2012-06-13</strong>: Made symbolic link removal of the node_modules fall back in order of importance, fixed more deletion bugs.</li>
-			<li><strong>2012-06-13</strong>: Fixed MongoDB to start succesfully more often by making it independent of Linux process listing.
-			<li><strong>2012-05-20</strong>: Made sure the output directory is deleted as soon as possible and remade as late as possible, support anti-viruses.</li>
-			<li><strong>2012-05-20</strong>: Support for <pre>meteor deploy</pre>.</li>
-			<li><strong>2012-05-19</strong>: Made symbolic link removal of the node_modules directory try multiple methods, to avoid nuking Meteor.</li>
-			<li><strong>2012-05-19</strong>: Fixed security issue where URI's containing back slashes crashed Connect, sent by Firefox on Windows.</li>
-			<li><strong>2012-05-06</strong>: Initial support and fixes for Windows, which became possible with Node 0.6.18 and Node-Fibers 0.6.7.</li>
-		</ul>
-	</div>
 </template>
