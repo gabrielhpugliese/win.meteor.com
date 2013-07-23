@@ -7,9 +7,9 @@ if (Meteor.is_client) {
   Template.windows.meteor_link = "http://www.meteor.com/";
   Template.windows.meteorite_link = "https://github.com/oortcloud/meteorite";
 
-  Template.windows.sd_download = "https://dl.dropboxusercontent.com/s/itlj5n5wnbna1lz/Meteor_0.6.4-rev1.msi";
-  Template.windows.sd_version = "0.6.4-rev1";
-  Template.windows.sd_fileSize = "27.7 MB";
+  Template.windows.sd_download = "https://copy.com/b8J7z1DPnxsG/Meteor_0.6.4.1-win1.msi?download=1";
+  Template.windows.sd_version = "0.6.4.1-win1";
+  Template.windows.sd_fileSize = "27.1 MB";
   Template.windows.sd_github = "https://github.com/sdarnell/meteor";
   Template.windows.sd_wiki = "https://github.com/sdarnell/meteor/wiki/Windows";
 
